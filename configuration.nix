@@ -36,6 +36,10 @@ in
       };
     };
     kernelPackages = pkgs.linuxPackages_cachyos-lto;
+    plymouth = {
+      enable = true;
+      theme = "breeze";
+    };
   };
 
   networking = { 
