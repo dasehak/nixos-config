@@ -38,6 +38,7 @@ in
     kernelPackages = pkgs.linuxPackages_cachyos-lto;
     plymouth = {
       enable = true;
+      themePackages = [ pkgs.kdePackages.breeze-plymouth ];
       theme = "breeze";
     };
   };
