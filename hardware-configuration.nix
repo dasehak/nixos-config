@@ -48,12 +48,6 @@
       options = [ "compress-force=zstd:3" ]; 
     };
 
-    "/media/containers/nextcloud/data" = {
-      device = "/dev/mapper/nextcloud";
-      fsType = "ext4";
-      options = [ "defaults" ];
-    };
-  };
   swapDevices = [ ];
 
   networking.useDHCP = lib.mkDefault true;

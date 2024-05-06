@@ -159,7 +159,6 @@ in
     isNormalUser = true;
     extraGroups = [
       "wheel"
-      "docker"
       "libvirtd"
       "vboxusers"
     ];
@@ -167,7 +166,6 @@ in
   };
 
   virtualisation = { 
-    docker.enable = true;
     libvirtd.enable = true;
     # virtualbox.host = {
     #   enable = true;
@@ -177,7 +175,6 @@ in
 
   environment = { 
     systemPackages = with pkgs; [
-      docker-compose
       obfs4
       lsof
       bat
