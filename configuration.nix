@@ -160,7 +160,7 @@ in
       "wheel"
       "libvirtd"
       "adbusers"
-      "vboxusers"
+      "kvm"
     ];
     shell = pkgs.fish;
   };
