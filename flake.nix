@@ -20,7 +20,7 @@
       inputs.hyprland.follows = "hyprland";
     };
     split-monitor-workspaces = {
-      url = "github:TyroneWatermelon420/split-monitor-workspaces/main";
+      url = "github:Duckonaut/split-monitor-workspaces/main";
       inputs.hyprland.follows = "hyprland";
     };
 
