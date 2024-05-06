@@ -30,7 +30,7 @@ in
       tgpt
       haruna
       logseq
-      ungoogled-chromium
+      # ungoogled-chromium
       onlyoffice-bin
       gamemode
       tree
@@ -64,8 +64,8 @@ in
       p7zip
       mumble
       lldb
-      inputs.nix-gaming.packages.${pkgs.system}.wine-ge
-      inputs.nix-gaming.packages.${pkgs.system}.wine-discord-ipc-bridge
+      # inputs.nix-gaming.packages.${pkgs.system}.wine-ge
+      # inputs.nix-gaming.packages.${pkgs.system}.wine-discord-ipc-bridge
       gparted
     ] ++ additionalPackages.specificPackages;
     sessionVariables = {
@@ -93,6 +93,7 @@ in
   };
 
   programs = {
+    firefox.enable = true;
     fish.enable = true;
     home-manager.enable = true;
     nixvim = {
