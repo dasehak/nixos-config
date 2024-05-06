@@ -6,8 +6,6 @@ in
   imports =
     [
       ./hardware-configuration.nix
-      ./containers/navidrome.nix
-      ./containers/nextcloud.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
