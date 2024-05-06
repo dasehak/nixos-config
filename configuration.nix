@@ -51,6 +51,7 @@ in
   i18n.defaultLocale = "en_US.UTF-8";
 
   programs = {
+    adb.enable = true;
     hyprland = {
       enable = de == "wayland";
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
@@ -158,6 +159,7 @@ in
     extraGroups = [
       "wheel"
       "libvirtd"
+      "adbusers"
       "vboxusers"
     ];
     shell = pkgs.fish;
