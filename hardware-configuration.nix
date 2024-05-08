@@ -9,7 +9,6 @@
     initrd = {
       availableKernelModules = [ "ehci_pci" "aesni_intel" "ahci" "cryptd" "nvme" "usbhid" "usb_storage" "sd_mod" ];
       kernelModules = [ "dm-snapshot" ];
-      kernelParams = [ "quiet" ];
       luks.devices = {
         root = {
           device = "/dev/nvme0n1p3";
@@ -17,6 +16,7 @@
         };
       };
     };
+    kernelParams = [ "quiet" ];
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];
     supportedFilesystems = [ "ntfs" ];
