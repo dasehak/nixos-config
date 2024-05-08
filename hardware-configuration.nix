@@ -14,9 +14,6 @@
           device = "/dev/nvme0n1p3";
           preLVM = true;
         };
-        nextcloud = {
-          device = "/dev/nvme0n1p4"; # Вместо раздела на диске создать LV в nyax_vg
-        };
       };
     };
     kernelModules = [ "kvm-intel" ];
