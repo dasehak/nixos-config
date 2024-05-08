@@ -9,6 +9,7 @@
     initrd = {
       availableKernelModules = [ "ehci_pci" "aesni_intel" "ahci" "cryptd" "nvme" "usbhid" "usb_storage" "sd_mod" ];
       kernelModules = [ "dm-snapshot" ];
+      kernelParams = [ "quiet" ];
       luks.devices = {
         root = {
           device = "/dev/nvme0n1p3";
@@ -19,6 +20,22 @@
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];
     supportedFilesystems = [ "ntfs" ];
+    loader = {
+      systemd-boot = {
+        enable = true;
+        consoleMode = "max";
+      };
+      efi = {
+	canTouchEfiVariables = true;
+	efiSysMountPoint = "/boot/efi";
+      };
+    };
+    kernelPackages = pkgs.linuxPackages_cachyos-lto;
+    plymouth = {
+      enable = true;
+      themePackages = [ pkgs.kdePackages.breeze-plymouth ];
+      theme = "breeze";     
+    };
   };
 
   fileSystems = {

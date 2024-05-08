@@ -22,25 +22,6 @@ in
     ] ++ (if de == "wayland" then [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ] else []);
   };
 
-  boot = {
-    loader = {
-      systemd-boot = {
-        enable = true;
-	consoleMode = "max";
-      };
-      efi = { 
-        canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot/efi";
-      };
-    };
-    kernelPackages = pkgs.linuxPackages_cachyos-lto;
-    plymouth = {
-      enable = true;
-      themePackages = [ pkgs.kdePackages.breeze-plymouth ];
-      theme = "breeze";
-    };
-  };
-
   networking = { 
     hostName = "nyax";
     networkmanager.enable = true; 
