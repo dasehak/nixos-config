@@ -9,6 +9,7 @@ in
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+#    inputs.nur.hmModules.nur
   ] ++ (if de == "wayland" then [
     ./hyprland.nix
     ./waybar.nix 
@@ -22,6 +23,7 @@ in
     packages = with pkgs; [
       bandwhich
       inputs.nixpkgs-blender-3-6-5.legacyPackages.${pkgs.system}.blender-hip
+#      nur.repos.mur.ayugram-desktop
       dconf # Убрать и проверить что будет
       dust
       eza

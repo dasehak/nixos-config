@@ -38,6 +38,7 @@
     chaotic,
     stylix,
     nixvim,
+    nur,
     ...
   } @ inputs: {
     nixosConfigurations.nyax =
@@ -55,9 +56,12 @@
             home-manager.useUserPackages = true;
             home-manager.users.dasehak = import ./users/dasehak/home.nix;
   	    home-manager.extraSpecialArgs = specialArgs;
+	    nixpkgs.overlays = [
+              nur.overlay 
+	    ];
           }
 	  chaotic.nixosModules.default
-	  nur.nixosModules.nur
+#	  nur.nixosModules.nur
         ] ++ (if de == "wayland" || de == "xorg" then stylix.nixosModules.stylix else []);
       in
       nixpkgs.lib.nixosSystem { inherit system modules specialArgs; };
