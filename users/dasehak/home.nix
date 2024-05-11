@@ -24,6 +24,7 @@ in
       bandwhich
       inputs.nixpkgs-blender-3-6-5.legacyPackages.${pkgs.system}.blender-hip
 #      nur.repos.mur.ayugram-desktop
+      cinny-desktop
       dconf # Убрать и проверить что будет
       dust
       eza
