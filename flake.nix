@@ -3,6 +3,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-blender-3-6-5.url = "github:nixos/nixpkgs/a71323f68d4377d12c04a5410e214495ec598d4c";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    nur.url = "github:nix-community/NUR";
 
     home-manager = {
       url = github:nix-community/home-manager;
@@ -56,6 +57,7 @@
   	    home-manager.extraSpecialArgs = specialArgs;
           }
 	  chaotic.nixosModules.default
+	  nur.nixosModules.nur
         ] ++ (if de == "wayland" || de == "xorg" then stylix.nixosModules.stylix else []);
       in
       nixpkgs.lib.nixosSystem { inherit system modules specialArgs; };
