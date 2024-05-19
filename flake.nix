@@ -5,6 +5,11 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     nur.url = "github:nix-community/NUR";
 
+    pollymc = {
+      url = "github:fn2006/PollyMC";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = github:nix-community/home-manager;
       inputs.nixpkgs.follows = "nixpkgs"; 
@@ -33,6 +38,7 @@
     self, 
     nixpkgs,
     nixpkgs-blender-3-6-5,
+    pollymc,
     split-monitor-workspaces,
     home-manager,
     chaotic,

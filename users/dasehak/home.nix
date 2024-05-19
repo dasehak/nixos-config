@@ -24,6 +24,7 @@ in
       bandwhich
       inputs.nixpkgs-blender-3-6-5.legacyPackages.${pkgs.system}.blender-hip
 #      nur.repos.mur.ayugram-desktop
+      inputs.pollymc.packages.${pkgs.system}.pollymc #-unwrapped
       cinny-desktop
       dconf # Убрать и проверить что будет
       dust
@@ -67,8 +68,8 @@ in
       p7zip
       mumble
       lldb
-      # inputs.nix-gaming.packages.${pkgs.system}.wine-ge
-      # inputs.nix-gaming.packages.${pkgs.system}.wine-discord-ipc-bridge
+      inputs.nix-gaming.packages.${pkgs.system}.wine-ge
+      inputs.nix-gaming.packages.${pkgs.system}.wine-discord-ipc-bridge
       gparted
     ] ++ additionalPackages.specificPackages;
     sessionVariables = {
