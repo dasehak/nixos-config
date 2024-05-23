@@ -29,6 +29,7 @@ in
       dconf # Убрать и проверить что будет
       dust
       eza
+      nextcloud-client
       hyperfine
       pinentry
       tgpt
