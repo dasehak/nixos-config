@@ -61,13 +61,12 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.dasehak = import ./users/dasehak/home.nix;
-  	    home-manager.extraSpecialArgs = specialArgs;
-	    nixpkgs.overlays = [
+            home-manager.extraSpecialArgs = specialArgs;
+            nixpkgs.overlays = [
               nur.overlay 
-	    ];
+            ];
           }
-	  chaotic.nixosModules.default
-#	  nur.nixosModules.nur
+          chaotic.nixosModules.default
         ] ++ (if de == "wayland" || de == "xorg" then stylix.nixosModules.stylix else []);
       in
       nixpkgs.lib.nixosSystem { inherit system modules specialArgs; };
