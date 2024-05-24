@@ -12,6 +12,7 @@ let
       kjournald
       partitionmanager
       kpmcore
+      neochat
   ]);
 in
 {
