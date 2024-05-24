@@ -9,7 +9,6 @@ in
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
-#    inputs.nur.hmModules.nur
   ] ++ (if de == "wayland" then [
     ./hyprland.nix
     ./waybar.nix 
@@ -106,19 +105,19 @@ in
       colorschemes.catppuccin.enable = true;
       plugins = {
         lualine.enable = true;
-	lsp = {
+        lsp = {
           enable = true;
           servers = {
             lua-ls.enable = true;
             rust-analyzer = {
-	      enable = true;
-	      installCargo = true;
-	      installRustc = true;
-	    };
-	    clangd.enable = true;
+              enable = true;
+              installCargo = true;
+              installRustc = true;
+            };
+            clangd.enable = true;
           };
         };
-	telescope.enable = true;
+	    telescope.enable = true;
       };
       options = {
         number = true;
@@ -137,7 +136,7 @@ in
          show_hidden = true;
          sort_by = "natural";
          sort_dir_first = true;
-       };
+        };
       };
     };
     rofi.enable = de == "xorg";
