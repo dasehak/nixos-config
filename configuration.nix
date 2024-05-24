@@ -115,11 +115,6 @@ in
       enable = true;
       publish.userServices = true;
     };
-    murmur = {
-      enable = true;
-      openFirewall = true;
-      bandwidth = 128000;
-    };
   };
 
   hardware = {
