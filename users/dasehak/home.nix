@@ -119,7 +119,7 @@ in
         };
 	    telescope.enable = true;
       };
-      options = {
+      opts = {
         number = true;
         shiftwidth = 4;
       };

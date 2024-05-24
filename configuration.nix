@@ -64,7 +64,14 @@ in
     sudo-rs.enable = true;
   };
 
-  services = { 
+  services = {
+    displayManager = {
+      sddm = {
+        wayland.enable = de == "plasma";
+        enable = de == "plasma";
+      };
+      defaultSession = (if de == "plasma" then "plasma" else if de == "xorg" then "xterm" else "");
+    };
     syncthing = {
       enable = true;
       user = "dasehak";
@@ -78,17 +85,12 @@ in
       pulse.enable = true;
       jack.enable = true;
     };
+    libinput.enable = true;
     xserver = {
       enable = true;
-      libinput.enable = true;
       displayManager = {
-        sddm = {
-          wayland.enable = de == "plasma";
-          enable = de == "plasma";
-        };
         lightdm.enable = false;
         startx.enable = de == "xorg";
-        defaultSession = (if de == "plasma" then "plasma" else if de == "xorg" then "xterm" else "");
       };
       windowManager.dwm = {
         enable = de == "xorg";
