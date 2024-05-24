@@ -82,19 +82,19 @@ in
       enable = true;
       libinput.enable = true;
       displayManager = {
- 	sddm = {
-	  wayland.enable = de == "plasma";
-	  enable = de == "plasma";
-	};
-	lightdm.enable = false;
-	startx.enable = de == "xorg";
-	defaultSession = (if de == "plasma" then "plasma" else if de == "xorg" then "xterm" else "");
+        sddm = {
+          wayland.enable = de == "plasma";
+          enable = de == "plasma";
+        };
+        lightdm.enable = false;
+        startx.enable = de == "xorg";
+        defaultSession = (if de == "plasma" then "plasma" else if de == "xorg" then "xterm" else "");
       };
       windowManager.dwm = {
         enable = de == "xorg";
-	package = pkgs.dwm.override {
-	  conf = ./configs/dwm.h;
-	};
+        package = pkgs.dwm.override {
+          conf = ./configs/dwm.h;
+        };
       };
     };
     desktopManager.plasma6.enable = de == "plasma";
