@@ -2,6 +2,7 @@
 let
   specificPackages = with pkgs; [
     wl-clipboard
+    syncthing-tray
   ] ++ (with pkgs.kdePackages; [
       gwenview
       krfb
