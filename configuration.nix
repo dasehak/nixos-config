@@ -149,10 +149,6 @@ in
   virtualisation = {
     docker.enable = true;
     libvirtd.enable = true;
-    # virtualbox.host = {
-    #   enable = true;
-    #   enableExtensionPack = true;
-    # };
   };
 
   environment = { 
@@ -172,7 +168,6 @@ in
       liberation_ttf
       nerdfonts
       corefonts
-      # uw-ttyp0.otb
     ];
     fontconfig.allowBitmaps = true;
   };
