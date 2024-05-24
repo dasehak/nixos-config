@@ -13,6 +13,7 @@ let
       partitionmanager
       kpmcore
       neochat
+      plasma-vault
   ]);
 in
 {
