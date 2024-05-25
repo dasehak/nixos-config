@@ -34,6 +34,8 @@ in
       tgpt
       haruna
       logseq
+      glaxnimate
+      ffmpeg
       # ungoogled-chromium
       onlyoffice-bin
       gamemode
