@@ -16,7 +16,7 @@
         };
       };
     };
-    kernelParams = [ "quiet", "mitigations=off" ];
+    kernelParams = [ "quiet" "mitigations=off" ];
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];
     supportedFilesystems = [ "ntfs" ];
