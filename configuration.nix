@@ -33,6 +33,7 @@ in
 
   programs = {
     adb.enable = true;
+    gamemode.enable = true;
     hyprland = {
       enable = de == "wayland";
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;

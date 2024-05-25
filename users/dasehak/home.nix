@@ -38,7 +38,6 @@ in
       ffmpeg
       # ungoogled-chromium
       onlyoffice-bin
-      gamemode
       tree
       vesktop
       btop
