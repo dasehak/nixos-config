@@ -73,6 +73,10 @@ in
       };
       defaultSession = (if de == "plasma" then "plasma" else if de == "xorg" then "xterm" else "");
     };
+    sunshine = {
+      enable = true;
+      openFirewall = true;
+    };
     syncthing = {
       enable = true;
       user = "dasehak";

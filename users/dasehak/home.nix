@@ -49,7 +49,6 @@ in
       strawberry
       tor-browser-bundle-bin
       krita
-      sunshine
       kdenlive
       nicotine-plus
       mangohud
