@@ -16,11 +16,9 @@ in
     experimental-features = "nix-command flakes";
     substituters = [
       "https://nix-gaming.cachix.org"
-      "https://shwewo.cachix.org"
     ] ++ (if de == "wayland" then [ "https://hyprland.cachix.org" ] else []);
     trusted-public-keys = [
       "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
-      "shwewo.cachix.org-1:84cIX7ETlqQwAWHBnd51cD4BeUVXCyGbFdtp+vLxKOo="
     ] ++ (if de == "wayland" then [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ] else []);
   };
 
