@@ -26,8 +26,10 @@ in
       inputs.pollymc.packages.${pkgs.system}.pollymc #-unwrapped
       cinny-desktop
       dconf # Убрать и проверить что будет
+      clang
       dust
       eza
+      jetbrains.clion
       nextcloud-client
       hyperfine
       pinentry
