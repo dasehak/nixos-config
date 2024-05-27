@@ -4,6 +4,7 @@
     nixpkgs-blender-3-6-5.url = "github:nixos/nixpkgs/a71323f68d4377d12c04a5410e214495ec598d4c";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     nur.url = "github:nix-community/NUR";
+    ayugram-desktop.url = "github:shwewo/ayugram-desktop";
 
     pollymc = {
       url = "github:fn2006/PollyMC";
@@ -37,6 +38,7 @@
   outputs = {
     self, 
     nixpkgs,
+    ayugram-desktop,
     nixpkgs-blender-3-6-5,
     pollymc,
     split-monitor-workspaces,

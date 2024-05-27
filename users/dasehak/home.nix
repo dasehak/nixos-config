@@ -22,7 +22,7 @@ in
     packages = with pkgs; [
       bandwhich
       inputs.nixpkgs-blender-3-6-5.legacyPackages.${pkgs.system}.blender-hip
-#      nur.repos.mur.ayugram-desktop
+      inputs.ayugram-desktop.packages.${pkgs.system}.default
       inputs.pollymc.packages.${pkgs.system}.pollymc #-unwrapped
       cinny-desktop
       dconf # Убрать и проверить что будет
