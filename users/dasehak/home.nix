@@ -28,6 +28,8 @@ in
       dconf # Убрать и проверить что будет
       clang
       dust
+      direnv
+      nix-direnv
       eza
       jetbrains.clion
       nextcloud-client
