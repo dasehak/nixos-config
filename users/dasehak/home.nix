@@ -50,6 +50,7 @@ in
       obsidian
       bun
       keepassxc
+      heroic
       strawberry
       tor-browser-bundle-bin
       krita
