@@ -141,6 +141,7 @@ in
   users.users.dasehak = {
     isNormalUser = true;
     extraGroups = [
+      "docker"
       "wheel"
       "libvirtd"
       "adbusers"
@@ -150,7 +151,13 @@ in
   };
 
   virtualisation = {
-    docker.enable = true;
+    docker = {
+      enable = true;
+      storageDriver = "btrfs";
+      daemon.settings = {
+        registry-mirrors = [ "https:\/\/huecker.io" ];
+      };
+    };
     libvirtd.enable = true;
   };
 
