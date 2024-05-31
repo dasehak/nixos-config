@@ -73,7 +73,7 @@ in
       p7zip
       mumble
       lldb
-      inputs.nix-gaming.packages.${pkgs.system}.wine-tkg
+      inputs.nix-gaming.packages.${pkgs.system}.wine-ge
       inputs.nix-gaming.packages.${pkgs.system}.wine-discord-ipc-bridge
       gparted
     ] ++ additionalPackages.specificPackages;
